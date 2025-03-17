@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Builder</title>
+
+</head>
+
+<body>
+
+    <h1>Welcome to the AI Resume Builder</h1>
+
+    <form method="POST">
+
+        <label for="name">Name:</label><br>
+
+        <input type="text" id="name" name="name" required><br><br>
+
+       
+
+        <label for="email">Email:</label><br>
+
+        <input type="email" id="email" name="email" required><br><br>
+
+       
+
+        <label for="phone">Phone:</label><br>
+
+        <input type="text" id="phone" name="phone" required><br><br>
+
+       
+
+        <label for="skills">Skills:</label><br>
+
+        <input type="text" id="skills" name="skills" required><br><br>
+
+       
+
+        <label for="education">Education:</label><br>
+
+        <input type="text" id="education" name="education" required><br><br>
+
+       
+
+        <label for="experience">Experience:</label><br>
+
+        <input type="text" id="experience" name="experience" required><br><br>
+
+       
+
+        <input type="submit" value="Generate Resume">
+
+    </form>
+
+</body>
+
+</html>
+
+Then, create a resume_template.html to display the generated resume:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Generated Resume</title>
+
+</head>
+
+<body>
+
+    <h1>Generated Resume for {{ resume.name }}</h1>
+
+    <p><strong>Email:</strong> {{ resume.email }}</p>
+
+    <p><strong>Phone:</strong> {{ resume.phone }}</p>
+
+    <p><strong>Skills:</strong> {{ resume.skills }}</p>
+
+    <p><strong>Education:</strong> {{ resume.education }}</p>
+
+    <p><strong>Experience:</strong> {{ resume.experience }}</p>
+
+</body>
+
+</html>
